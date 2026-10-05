@@ -1,0 +1,30 @@
+[
+  {
+    "name": "K2",
+    "region": "Karakoram",
+    "country": "Pakistan / China",
+    "elevation": "8,611 m",
+    "image": "images/hero/hero-karakoram.png"
+  },
+  {
+    "name": "Nanga Parbat",
+    "region": "Himalayas",
+    "country": "Pakistan",
+    "elevation": "8,126 m",
+    "image": "images/hero/hero-valley.png"
+  },
+  {
+    "name": "Broad Peak",
+    "region": "Karakoram",
+    "country": "Pakistan / China",
+    "elevation": "8,051 m",
+    "image": "images/gallery/high-mountain-camp.png"
+  },
+  {
+    "name": "Rakaposhi",
+    "region": "Karakoram",
+    "country": "Pakistan",
+    "elevation": "7,788 m",
+    "image": "images/gallery/alpine-lake.png"
+  }
+]

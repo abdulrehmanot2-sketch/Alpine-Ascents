@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Alpine Club of Pakistan",
+    "country": "Pakistan",
+    "location": "Islamabad, Pakistan",
+    "lat": 33.6844,
+    "lng": 73.0479,
+    "description": "A Pakistan-focused mountaineering community entry for exploring local climbing culture, training and mountain activities.",
+    "url": "https://example.com"
+  },
+  {
+    "name": "Pakistan Mountaineering Federation",
+    "country": "Pakistan",
+    "location": "Gilgit-Baltistan, Pakistan",
+    "lat": 35.9208,
+    "lng": 74.3087,
+    "description": "A sample educational directory entry representing organized mountaineering activity in Pakistan.",
+    "url": "https://example.com"
+  },
+  {
+    "name": "Alpine Club of Canada",
+    "country": "Canada",
+    "location": "Canmore, Alberta, Canada",
+    "lat": 51.089,
+    "lng": -115.359,
+    "description": "A sample global club listing for comparing mountain communities and alpine destinations.",
+    "url": "https://example.com"
+  },
+  {
+    "name": "British Mountaineering Council",
+    "country": "United Kingdom",
+    "location": "Manchester, UK",
+    "lat": 53.4808,
+    "lng": -2.2426,
+    "description": "A sample organization entry representing organized climbing and mountaineering communities.",
+    "url": "https://example.com"
+  }
+]

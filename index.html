@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Alpine Ascents — an educational single-page mountaineering and climbing information portal.">
+  <meta name="theme-color" content="#071827">
+  <title>Alpine Ascents | Conquer New Heights</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-mark"><span></span><span></span><span></span></div>
+  </div>
+
+  <nav id="mainNav" class="navbar navbar-expand-xl fixed-top" aria-label="Main navigation">
+    <div class="container-xxl">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home" aria-label="Alpine Ascents home">
+        <img src="images/logo/alpine-ascents-logo.png" alt="Alpine Ascents mountain logo">
+        <span class="brand-wordmark"><strong>ALPINE</strong><small>ASCENTS</small></span>
+      </a>
+      <div class="visitor-pill d-none d-lg-flex" title="Front-end demonstration counter">
+        <i class="bi bi-eye"></i><span id="visitorCount">1,248</span><small>VISITORS</small>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-1">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#mountaineering" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Mountaineering</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#history">History</a></li>
+              <li><a class="dropdown-item" href="#styles">Types / Styles</a></li>
+              <li><a class="dropdown-item" href="#techniques">Techniques</a></li>
+              <li><a class="dropdown-item" href="#sheltering">Sheltering</a></li>
+              <li><a class="dropdown-item" href="#hazards">Hazards</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#records">Records</a></li>
+          <li class="nav-item"><a class="nav-link" href="#organizations">Organizations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stories">Success Stories</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#developments">Developments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#guidelines">Guidelines</a></li>
+          <li class="nav-item ms-xl-2"><a class="btn  nav-cta" href="#contact">Start a Conversation <i
+                class="bi bi-arrow-up-right"></i> </a></li>
+          <li class="nav-item d-lg-none mt-3"><span class="mobile-visitors"><i class="bi bi-eye"></i> <span
+                id="visitorCountMobile">1,629</span> visitors</span></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="hero-image"></div>
+      <div class="hero-vignette"></div>
+      <div class="hero-content container-xxl">
+        <div class="row align-items-end min-vh-100">
+          <div class="col-lg-8 col-xl-7 pb-5 mb-lg-5">
+            <div class="eyebrow reveal">THE WORLD IS YOUR SUMMIT</div>
+            <h1 class="hero-title reveal">CONQUER<br><em>NEW HEIGHTS.</em></h1>
+            <p class="hero-copy reveal">Explore the craft of mountaineering, understand the mountains that shape it, and
+              discover the preparation behind every safe ascent.</p>
+            <div class="d-flex flex-wrap gap-3 reveal">
+              <a href="#mountaineering" class="btn btn-accent btn-lg px-4">Explore Mountaineering <i
+                  class="bi bi-arrow-down-right ms-2"></i></a>
+              <a href="#gallery" class="btn btn-glass btn-lg px-4">View Gallery <i class="bi bi-images ms-2"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-4 pb-5 mb-lg-5 d-none d-lg-block">
+            <div class="hero-side-card glass-panel reveal">
+              <span>FIELD NOTE 01</span>
+              <h3>Preparation is part of the ascent.</h3>
+              <p>Weather, route choice, equipment, pacing and team communication all shape a mountain day.</p>
+              <a href="#guidelines">Read the guidelines <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to introduction"><span></span>SCROLL TO EXPLORE</a>
+    </section>
+
+    <section id="about" class="section section-dark">
+      <div class="container-xxl">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 reveal">
+            <div class="image-frame">
+              <img src="images/hero/hero-valley.png" alt="Mountain valley with high peaks and expedition landscape"
+                class="img-fluid">
+              <div class="image-caption"><span></span><strong>THE SPIRIT OF MOUNTAINEERING</strong></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="section-kicker reveal">INTRODUCTION</div>
+            <h2 class="section-title reveal">More than reaching a summit.</h2>
+            <p class="lead text-soft reveal">Mountaineering brings together exploration, technical skill, endurance,
+              judgment and respect for changing mountain conditions.</p>
+            <p class="text-soft reveal">The activity ranges from trekking and alpine climbing to demanding high-altitude
+              expeditions. The environment can be unpredictable, so responsible preparation and conservative
+              decision-making are central to the experience.</p>
+            <div class="feature-list mt-4 reveal">
+              <div><i class="bi bi-compass"></i><span><strong>Exploration</strong><small>Read terrain, routes and
+                    changing conditions.</small></span></div>
+              <div><i class="bi bi-shield-check"></i><span><strong>Safety</strong><small>Plan equipment, communication
+                    and contingencies.</small></span></div>
+              <div><i class="bi bi-people"></i><span><strong>Teamwork</strong><small>Move with clear roles and shared
+                    decisions.</small></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-band">
+      <div class="container-xxl">
+        <div class="row g-0">
+          <div class="col-6 col-lg-3 stat-cell reveal"><strong data-counter="8000">0</strong><span>METRE-CLASS
+              PEAKS</span></div>
+          <div class="col-6 col-lg-3 stat-cell reveal"><strong data-counter="100">0</strong><span>EXPEDITIONS</span>
+          </div>
+          <div class="col-6 col-lg-3 stat-cell reveal"><strong data-counter="50">0</strong><span>ROUTE STORIES</span>
+          </div>
+          <div class="col-6 col-lg-3 stat-cell reveal"><strong data-counter="1000">0</strong><span>CLIMBER
+              PROFILES</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mountaineering" class="section section-light">
+      <div class="container-xxl">
+        <div class="section-heading-row reveal">
+          <div>
+            <div class="section-kicker">THE BASICS</div>
+            <h2 class="section-title dark">Explore mountaineering.</h2>
+          </div>
+          <p class="section-intro dark-copy">Five essential lenses help explain how mountaineering developed, how it is
+            practiced, and how people prepare for mountain environments.</p>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="topic-card" data-modal-title="History"
+              data-modal-body="Mountaineering evolved from exploration into a broad set of alpine disciplines. Early ascents helped establish route-finding, expedition logistics and mountain observation as core practices. The modern era added improved weather forecasting, communication, rescue systems and specialized equipment.">
+              <div class="topic-image"><img src="images/gallery/sunrise-expedition.png"
+                  alt="Sunrise over a mountain expedition landscape"><span>01</span></div>
+              <div class="topic-body">
+                <h3>History</h3>
+                <p>From exploration to modern high-altitude expeditions.</p><button class="text-link modal-trigger">Read
+                  more <i class="bi bi-arrow-right"></i></button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="topic-card" data-modal-title="Types / Styles"
+              data-modal-body="Mountain activities vary by terrain, objective and technical demand. Trekking, rock climbing, ice climbing, alpine climbing and expedition climbing each use different equipment, movement skills and planning methods.">
+              <div class="topic-image"><img src="images/gallery/alpine-lake.png"
+                  alt="Alpine lake surrounded by mountains"><span>02</span></div>
+              <div class="topic-body">
+                <h3>Types / Styles</h3>
+                <p>Understand the different ways people move through mountains.</p><button
+                  class="text-link modal-trigger">Read more <i class="bi bi-arrow-right"></i></button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4 reveal">
+            <article class="topic-card" data-modal-title="Techniques"
+              data-modal-body="Core skills include movement efficiency, route-finding, rope systems, belaying, rappelling, navigation and communication. Training should be matched to the terrain and objective, with qualified instruction for technical systems.">
+              <div class="topic-image"><img src="images/gallery/high-mountain-camp.png"
+                  alt="High mountain expedition camp"><span>03</span></div>
+              <div class="topic-body">
+                <h3>Techniques</h3>
+                <p>Learn the movement, navigation and team skills behind an ascent.</p><button
+                  class="text-link modal-trigger">Read more <i class="bi bi-arrow-right"></i></button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-6 reveal">
+            <article class="topic-card horizontal-card" data-modal-title="Sheltering"
+              data-modal-body="Sheltering in mountain environments means choosing appropriate campsites, tents and protection from wind, precipitation and cold. Expedition plans often use staged camps and carefully managed supplies.">
+              <div class="topic-image"><img src="images/gallery/high-mountain-camp.png"
+                  alt="Mountain campsite and expedition equipment"><span>04</span></div>
+              <div class="topic-body">
+                <h3>Sheltering</h3>
+                <p>Base camps, high camps and emergency shelter strategies.</p><button
+                  class="text-link modal-trigger">Read more <i class="bi bi-arrow-right"></i></button>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-6 reveal">
+            <article class="topic-card horizontal-card" data-modal-title="Hazards"
+              data-modal-body="Mountain hazards can include avalanches, rockfall, crevasses, extreme weather and altitude-related problems. Good decisions depend on route assessment, current conditions, experience, equipment and a willingness to turn back when risk becomes unacceptable.">
+              <div class="topic-image"><img src="images/hero/hero-karakoram.png"
+                  alt="Steep snow covered mountain terrain"><span>05</span></div>
+              <div class="topic-body">
+                <h3>Hazards</h3>
+                <p>Recognize changing conditions and build conservative decisions.</p><button
+                  class="text-link modal-trigger">Read more <i class="bi bi-arrow-right"></i></button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="history" class="section section-dark">
+      <div class="container-xxl">
+        <div class="section-kicker reveal">A JOURNEY THROUGH TIME</div>
+        <h2 class="section-title reveal">The mountain story.</h2>
+        <div class="timeline mt-5">
+          <div class="timeline-item reveal"><span>01</span>
+            <div><small>EARLY EXPLORATION</small>
+              <h3>Mapping the unknown</h3>
+              <p>Exploration combined travel, observation and route-finding in mountain environments.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal"><span>02</span>
+            <div><small>GOLDEN AGE OF ALPINISM</small>
+              <h3>Technical climbing emerges</h3>
+              <p>European alpine climbing developed new standards of route difficulty and technique.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal"><span>03</span>
+            <div><small>MODERN EXPEDITIONS</small>
+              <h3>Logistics become a discipline</h3>
+              <p>Communication, weather forecasting, specialist equipment and organized camps reshape expeditions.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal"><span>04</span>
+            <div><small>HIGH ALTITUDE</small>
+              <h3>Beyond the familiar</h3>
+              <p>Climbers push into thin-air environments where acclimatization and decision-making become critical.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal"><span>05</span>
+            <div><small>TODAY</small>
+              <h3>Performance meets responsibility</h3>
+              <p>Modern climbing increasingly balances achievement, safety, rescue planning and environmental
+                stewardship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="styles" class="section section-light">
+      <div class="container-xxl">
+        <div class="section-kicker reveal">TYPES / STYLES</div>
+        <h2 class="section-title dark reveal">Choose your terrain.</h2>
+        <div class="row g-3 mt-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="style-card"><i class="bi bi-signpost-2"></i>
+              <h3>Hiking</h3>
+              <p>Trail-based movement with lower technical complexity.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="style-card"><i class="bi bi-map"></i>
+              <h3>Trekking</h3>
+              <p>Longer journeys through varied mountain terrain.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="style-card"><i class="bi bi-triangle"></i>
+              <h3>Rock Climbing</h3>
+              <p>Technical movement on rock faces using climbing systems.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="style-card"><i class="bi bi-snow"></i>
+              <h3>Ice Climbing</h3>
+              <p>Specialized movement on frozen terrain and ice features.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="style-card"><i class="bi bi-mountain"></i>
+              <h3>Alpine Climbing</h3>
+              <p>Fast-moving, mixed-terrain routes in alpine environments.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="style-card"><i class="bi bi-backpack"></i>
+              <h3>Expedition</h3>
+              <p>Longer objectives requiring logistics, camps and supplies.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="style-card"><i class="bi bi-cloud-snow"></i>
+              <h3>High Altitude</h3>
+              <p>Thin-air environments requiring acclimatization and planning.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="style-card"><i class="bi bi-stars"></i>
+              <h3>Exploration</h3>
+              <p>Route discovery, observation and responsible adventure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="techniques" class="section section-dark">
+      <div class="container-xxl">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7">
+            <div class="section-kicker reveal">TECHNIQUE</div>
+            <h2 class="section-title reveal">Master the essentials.</h2>
+          </div>
+          <div class="col-lg-5">
+            <p class="text-soft reveal">Technical systems should be learned through qualified instruction and practiced
+              before they are relied on in complex terrain.</p>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="tech-card"><i class="bi bi-link-45deg"></i>
+              <h3>Rope Systems</h3>
+              <p>Understand rope handling and system checks.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="tech-card"><i class="bi bi-shield-lock"></i>
+              <h3>Belaying</h3>
+              <p>Manage protection and communication as a team.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="tech-card"><i class="bi bi-arrow-down-circle"></i>
+              <h3>Rappelling</h3>
+              <p>Controlled descent using appropriate anchors and systems.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="tech-card"><i class="bi bi-snow2"></i>
+              <h3>Ice Axe</h3>
+              <p>Use and carry techniques vary by terrain and slope.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="tech-card"><i class="bi bi-shoe-print"></i>
+              <h3>Crampons</h3>
+              <p>Efficient footwork on hard snow and ice.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="tech-card"><i class="bi bi-sign-turn-right"></i>
+              <h3>Route Finding</h3>
+              <p>Read terrain and select sensible lines.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="tech-card"><i class="bi bi-compass"></i>
+              <h3>Navigation</h3>
+              <p>Combine maps, compass, landmarks and digital tools.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3 reveal">
+            <div class="tech-card"><i class="bi bi-chat-dots"></i>
+              <h3>Communication</h3>
+              <p>Use clear signals and agreed team procedures.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sheltering" class="split-section">
+      <div class="split-image" style="background-image:url('images/gallery/.png')"></div>
+      <div class="split-content section-light">
+        <div class="section-kicker reveal">SHELTERING</div>
+        <h2 class="section-title dark reveal">Build a safer base.</h2>
+        <p class="dark-copy reveal">Shelter is part of expedition planning. Camps need to balance protection, terrain,
+          access to water, weather exposure and the practical movement of people and supplies.</p>
+        <div class="shelter-grid">
+          <div class="mini-feature reveal"><strong>Base Camp</strong><span>Operational hub for longer objectives.</span>
+          </div>
+          <div class="mini-feature reveal"><strong>High Camp</strong><span>Temporary staging closer to the
+              objective.</span></div>
+          <div class="mini-feature reveal"><strong>Emergency Shelter</strong><span>Backup protection for unexpected
+              delays.</span></div>
+          <div class="mini-feature reveal"><strong>Weather Protection</strong><span>Wind, precipitation and cold
+              management.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hazards" class="section safety-section">
+      <div class="container-xxl">
+        <div class="section-kicker reveal">SAFETY</div>
+        <h2 class="section-title reveal">Know the risks.</h2>
+        <p class="text-soft max-copy reveal">Mountain hazards change with terrain, season and weather. The safest plan
+          is one that allows conditions to change without forcing the team to continue.</p>
+        <div class="row g-3 mt-4">
+          <div class="col-12 col-sm-6 col-lg-3 reveal">
+            <div class="hazard-card"><i class="bi bi-exclamation-triangle"></i>
+              <h3>Avalanches</h3>
+              <p>Assess snowpack, terrain and current conditions.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 reveal">
+            <div class="hazard-card"><i class="bi bi-cloud-lightning"></i>
+              <h3>Weather</h3>
+              <p>Storms, wind and rapid temperature changes can reshape plans.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 reveal">
+            <div class="hazard-card"><i class="bi bi-layers"></i>
+              <h3>Crevasses</h3>
+              <p>Glaciated terrain requires route awareness and appropriate systems.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3 reveal">
+            <div class="hazard-card"><i class="bi bi-heart-pulse"></i>
+              <h3>Altitude</h3>
+              <p>Acclimatization, pacing and monitoring are essential at elevation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="safety-panel glass-panel reveal mt-4"><i class="bi bi-shield-check"></i>
+          <div><strong>SAFETY FIRST</strong><span>Train for the terrain, check conditions, communicate clearly, and turn
+              around when the risk no longer matches the plan.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="records" class="section">
+      <div class="container-xxl">
+
+        <div class="section-kicker reveal">RECORDS</div>
+
+        <h2 class="section-title reveal">
+          Numbers behind the peaks.
+        </h2>
+
+        <p class="text-soft reveal">
+          A compact reference of notable mountain facts and milestones.
+          Explore some of the world's most remarkable peaks, records,
+          and mountaineering achievements.
+        </p>
+
+        <div class="records-table-wrapper reveal">
+          <table class="records-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Record</th>
+                <th>Value</th>
+                <th>Subject</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>Highest Peak</td>
+                <td><strong>8,848.86 m</strong></td>
+                <td>Mount Everest</td>
+                <td>Nepal / Tibet</td>
+              </tr>
+
+              <tr>
+                <td>02</td>
+                <td>Second Highest</td>
+                <td><strong>8,611 m</strong></td>
+                <td>K2</td>
+                <td>Pakistan / China</td>
+              </tr>
+
+              <tr>
+                <td>03</td>
+                <td>Third Highest</td>
+                <td><strong>8,586 m</strong></td>
+                <td>Kangchenjunga</td>
+                <td>Nepal / India</td>
+              </tr>
+
+              <tr>
+                <td>04</td>
+                <td>First Everest Ascent</td>
+                <td><strong>1953</strong></td>
+                <td>Hillary &amp; Tenzing</td>
+                <td>Nepal</td>
+              </tr>
+
+              <tr>
+                <td>05</td>
+                <td>Eight-Thousanders</td>
+                <td><strong>14 Peaks</strong></td>
+                <td>Mountains above 8,000 m</td>
+                <td>Asia</td>
+              </tr>
+
+              <tr>
+                <td>06</td>
+                <td>Highest Volcano</td>
+                <td><strong>6,893 m</strong></td>
+                <td>Ojos del Salado</td>
+                <td>Chile / Argentina</td>
+              </tr>
+
+              <tr>
+                <td>07</td>
+                <td>Highest Mountain Range</td>
+                <td><strong>8,000+ m</strong></td>
+                <td>Himalayas</td>
+                <td>Asia</td>
+              </tr>
+
+              <tr>
+                <td>08</td>
+                <td>K2 First Ascent</td>
+                <td><strong>1954</strong></td>
+                <td>Compagnoni &amp; Lacedelli</td>
+                <td>Pakistan</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="community-section">
+
+      <!-- TOP CONTENT -->
+      <div class="community-header">
+
+        <div class="community-title">
+
+          <div class="section-number">
+             COMMUNITY
+          </div>
+
+          <h1>
+            Find the mountain
+            <span>community.</span>
+          </h1>
+
+          <p>
+            Connect with climbers, organizations and mountain
+            communities from around the world. Explore expeditions,
+            climbing clubs and mountain organizations across the globe.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- MAIN COMMUNITY AREA -->
+      <div class="community-container">
+
+
+        <!-- LEFT CONTENT -->
+        <div class="community-info">
+
+          <!-- STATS -->
+          <div class="stats">
+
+            <div class="stat-box">
+              <h3>120+</h3>
+              <p>Organizations</p>
+            </div>
+
+            <div class="stat-box">
+              <h3>35+</h3>
+              <p>Countries</p>
+            </div>
+
+            <div class="stat-box">
+              <h3>500+</h3>
+              <p>Expeditions</p>
+            </div>
+
+            <div class="stat-box">
+              <h3>10K+</h3>
+              <p>Members</p>
+            </div>
+
+          </div>
+
+
+          <!-- FIND NEAR ME -->
+          <div class="location-box">
+
+            <div>
+              <span class="location-icon">⌖</span>
+
+              <div>
+                <h3>Find communities near you</h3>
+                <p>
+                  Discover mountain clubs and organizations
+                  in your area.
+                </p>
+              </div>
+            </div>
+
+            <button id="locateBtn" class="location-btn" type="button">
+              <span>Use My Location</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </button>
+
+          </div>
+
+
+          <!-- FILTERS -->
+          <div class="filter-area">
+
+            <h3>Explore by</h3>
+
+            <div class="filters">
+              <button class="filter active">All</button>
+              <button class="filter">Organizations</button>
+              <button class="filter">Climbing Clubs</button>
+              <button class="filter">Expeditions</button>
+              <button class="filter">Rescue Teams</button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- MAP -->
+        <div class="map-container">
+
+          <!-- SEARCH -->
+          <div class="map-search">
+            <span>⌕</span>
+            <input type="text" placeholder="Search mountain, country or organization...">
+          </div>
+
+
+          <!-- MAP -->
+          <div class="mountain-map">
+  <div class="container">
+    <h2 class="text-center mb-4"></h2>
+
+    <div class="map-container">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12930.941062233142!2d76.50480035872461!3d35.88000394647345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38fad5add7ff4adb%3A0xc531647bf8e9d577!2sK2!5e0!3m2!1sen!2s!4v1790002746077!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+        
+          </div>
+
+
+          <!-- MAP BOTTOM -->
+          <div class="map-footer">
+
+            <span>
+              ● 120+ Communities worldwide
+            </span>
+
+            <span>
+              Updated 2026
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+
+    <section id="gallery" class="section gallery-section">
+      <div class="container-xxl">
+        <div class="section-heading-row reveal">
+          <div>
+            <div class="section-kicker"> GALLERY</div>
+            <h2 class="section-title reveal">See the terrain.</h2>
+          </div>
+          <p class="section-intro">A visual collection of mountain landscapes, camps and expedition atmosphere.</p>
+        </div>
+        <div class="gallery-filter reveal mt-4" role="group" aria-label="Gallery filters">
+          <button class="filter-btn active" data-filter="all">All</button><button class="filter-btn"
+            data-filter="mountains">Mountains</button><button class="filter-btn"
+            data-filter="camps">Camps</button><button class="filter-btn" data-filter="stories">Stories</button>
+        </div>
+        <div class="gallery-grid mt-3">
+          <button class="gallery-item item-wide mountains" data-full="images/hero/hero-karakoram.png"><img
+              src="images/hero/hero-karakoram.png" alt="Snow covered Karakoram inspired mountain panorama"><span>THE
+              KARAKORAM</span></button>
+          <button class="gallery-item camps" data-full="images/gallery/high-mountain-camp.png"><img
+              src="images/gallery/high-mountain-camp.png" alt="High mountain expedition camp"><span>HIGH
+              CAMP</span></button>
+          <button class="gallery-item mountains" data-full="images/gallery/alpine-lake.png"><img
+              src="images/gallery/alpine-lake.png" alt="Alpine lake and mountain valley"><span>ALPINE
+              VALLEY</span></button>
+          <button class="gallery-item stories" data-full="images/gallery/sunrise-expedition.png"><img
+              src="images/gallery/sunrise-expedition.png" alt="Sunrise over expedition landscape"><span>FIRST
+              LIGHT</span></button>
+          <button class="gallery-item item-wide mountains" data-full="images/hero/hero-valley.png"><img
+              src="images/hero/hero-valley.png" alt="Wide mountain valley landscape"><span>VALLEY OF
+              PEAKS</span></button>
+          <button class="gallery-item stories" data-full="images/gallery/mountain-portal.png"><img
+              src="images/gallery/expedtion.png" alt="Mountain portal visual"><span>EXPEDITION
+              NOTES</span></button>
+        </div>
+        <div class="video-feature reveal mt-5">
+          <div class="video-copy">
+            <span class="section-kicker">EXPEDITION FILM</span>
+            <h3>Beyond the Summit.</h3>
+            <p>
+              Step into the mountains through expedition footage, remote landscapes,
+              and the moments that define the journey beyond the trail.
+            </p>
+            <div class="video-meta">
+              <span><i class="bi bi-camera-reels"></i> Expedition Footage</span>
+              <span><i class="bi bi-play-circle"></i> Watch &amp; Explore</span>
+            </div>
+          </div>
+
+          <div class="video-player">
+            <video controls preload="metadata" poster="videos/poster-expedition.png"
+              aria-label="Alpine expedition video">
+              <source src="videos/expedition.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="developments" class="section section-light">
+      <div class="container-xxl">
+        <div class="section-kicker reveal">LATEST DEVELOPMENTS</div>
+        <h2 class="section-title dark reveal">Where the field is moving.</h2>
+        <div class="row g-4 mt-2">
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="article-card">
+              <div class="article-number">01</div><span>SAFETY TECHNOLOGY</span>
+              <h3>Better communication in remote terrain</h3>
+              <p>Modern satellite and digital communication tools can help teams share updates and coordinate support.
+              </p><a href="#guidelines">Explore guidance <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="article-card">
+              <div class="article-number">02</div><span>EXPEDITION METHODS</span>
+              <h3>Planning with weather windows</h3>
+              <p>Forecast interpretation and flexible scheduling are increasingly central to expedition planning.</p><a
+                href="#guidelines">Explore guidance <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 reveal">
+            <article class="article-card">
+              <div class="article-number">03</div><span>ENVIRONMENT</span>
+              <h3>Lower-impact mountain travel</h3>
+              <p>Responsible expeditions consider waste, campsite impact, local communities and long-term stewardship.
+              </p><a href="#guidelines">Explore guidance <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<section class="guides-section" id="guides">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="guides-header reveal">
+      <span class="section-kicker">OUR GUIDES</span>
+
+      <h2 class="guides-title">
+        Meet the People<br>
+        <span>Behind the Ascent.</span>
+      </h2>
+
+      <p class="guides-intro">
+        Experienced mountaineers who lead every expedition with knowledge,
+        discipline, and a deep respect for the mountains.
+      </p>
+    </div>
+    <div class="row g-4 mt-4">
+
+      <!-- Guide 01 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="guide-card reveal">
+
+          <div class="guide-image">
+            <img src="images/gallery/expedition-leader.jpg"
+                 alt="Mountain Guide"
+                 loading="lazy">
+
+            <div class="guide-number">01</div>
+          </div>
+
+          <div class="guide-content">
+
+            <span class="guide-role">
+              EXPEDITION LEADER
+            </span>
+
+            <h3>Alex Carter</h3>
+
+            <p>
+              Specializes in high-altitude expeditions, route planning,
+              and leading teams through challenging terrain.
+            </p>
+
+            <div class="guide-tags">
+              <span>High Altitude</span>
+              <span>Navigation</span>
+              <span>Leadership</span>
+            </div>
+
+          </div>
+
+        </article>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="guide-card reveal">
+
+          <div class="guide-image">
+            <img src="images/gallery/cilimbing-specialist.png"
+                 alt="Mountain Guide"
+                 loading="lazy">
+
+            <div class="guide-number">02</div>
+          </div>
+
+          <div class="guide-content">
+
+            <span class="guide-role">
+              CLIMBING SPECIALIST
+            </span>
+
+            <h3>Sarah Mitchell</h3>
+
+            <p>
+              Focused on technical climbing, rope systems, and helping
+              climbers build confidence in demanding environments.
+            </p>
+
+            <div class="guide-tags">
+              <span>Rock Climbing</span>
+              <span>Rope Systems</span>
+              <span>Safety</span>
+            </div>
+
+          </div>
+
+        </article>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="guide-card reveal">
+
+          <div class="guide-image">
+            <img src="images/gallery/alpine-guide.jpg"
+                 alt="Mountain Guide"
+                 loading="lazy">
+
+            <div class="guide-number">03</div>
+          </div>
+
+          <div class="guide-content">
+
+            <span class="guide-role">
+              ALPINE GUIDE
+            </span>
+
+            <h3>Daniel Brooks</h3>
+
+            <p>
+              Experienced in alpine environments, weather awareness,
+              expedition preparation, and mountain safety.
+            </p>
+
+            <div class="guide-tags">
+              <span>Alpine Skills</span>
+              <span>Weather</span>
+              <span>First Aid</span>
+            </div>
+
+          </div>
+
+        </article>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="guidelines" class="section guidelines-section">
+      <div class="container-xxl">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <div class="section-kicker reveal">GUIDELINES</div>
+            <h2 class="section-title reveal">Prepare before you climb.</h2>
+            <p class="text-soft reveal">These are general educational guidelines, not a substitute for professional
+              instruction, local conditions or emergency advice.</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="guide-block reveal"><span>01</span>
+              <div>
+                <h3>Before the expedition</h3>
+                <ul>
+                  <li>Check the weather and route conditions.</li>
+                  <li>Prepare and inspect appropriate equipment.</li>
+                  <li>Plan the route and realistic turnaround points.</li>
+                  <li>Inform emergency contacts and understand communications.</li>
+                  <li>Get training appropriate to the terrain.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="guide-block reveal"><span>02</span>
+              <div>
+                <h3>During climbing</h3>
+                <ul>
+                  <li>Follow agreed team safety procedures.</li>
+                  <li>Stay with the group and communicate changes.</li>
+                  <li>Monitor weather, terrain and personal condition.</li>
+                  <li>Use equipment according to training and manufacturer guidance.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="guide-block reveal"><span>03</span>
+              <div>
+                <h3>Emergency preparation</h3>
+                <ul>
+                  <li>Carry reliable communication and navigation tools.</li>
+                  <li>Know the nearest rescue resources where possible.</li>
+                  <li>Maintain first-aid preparedness.</li>
+                  <li>Have a clear emergency and turnaround plan.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container-xxl">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <div class="section-kicker reveal">CONTACT</div>
+            <h2 class="section-title reveal">Start a conversation.</h2>
+            <p class="text-soft reveal">Use this frontend contact form for the project demonstration. No message is sent
+              to a real server.</p>
+            <div class="contact-details reveal">
+              <div><i class="bi bi-envelope"></i><span>hello@alpineascents.example</span></div>
+              <div><i class="bi bi-geo-alt"></i><span>Mountain Information Portal</span></div>
+              <div><i class="bi bi-clock"></i><span>Open for exploration 24/7</span></div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <form id="contactForm" class="contact-form glass-panel reveal" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6"><label for="name">Full name</label><input id="name" name="name"
+                    class="form-control" required></div>
+                <div class="col-md-6"><label for="email">Email</label><input id="email" name="email" type="email"
+                    class="form-control" required></div>
+                <div class="col-md-6"><label for="phone">Phone</label><input id="phone" name="phone"
+                    class="form-control"></div>
+                <div class="col-md-6"><label for="subject">Subject</label><input id="subject" name="subject"
+                    class="form-control" required></div>
+                <div class="col-12"><label for="message">Message</label><textarea id="message" name="message" rows="5"
+                    class="form-control" required></textarea></div>
+                <div class="col-12 d-flex align-items-center gap-3"><button class="btn btn-accent btn-lg"
+                    type="submit">Send message <i class="bi bi-send ms-2"></i></button><span class="form-note">Frontend
+                    demo</span></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container-xxl">
+      <div class="row g-5">
+        <div class="col-lg-5"><a href="#home" class="footer-brand"><img src="images/logo/alpine-ascents-logo.png"
+              alt="Alpine Ascents logo"></a>
+          <p>Educational mountaineering information, mountain stories and expedition-focused design.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4>Explore</h4><a href="#about">About</a><a href="#records">Records</a><a href="#gallery">Gallery</a><a
+            href="#stories">Stories</a>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h4>Learn</h4><a href="#history">History</a><a href="#styles">Styles</a><a href="#techniques">Techniques</a><a
+            href="#guidelines">Guidelines</a>
+        </div>
+        <div class="col-lg-3">
+          <h4>Connect</h4>
+          <p>hello@alpineascents.example</p>
+          <div class="socials"><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+              aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://www.youtube.com/"
+              target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a><a
+              href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i
+                class="bi bi-facebook"></i></a></div>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Alpine Ascents — eProject Demonstration</span><a href="#home">Back to top
+          ↑</a></div>
+    </div>
+  </footer>
+
+  <div class="ticker"><span class="ticker-label">LIVE FIELD DATA</span>
+    <div class="ticker-track">
+      <div id="tickerContent">DATE — TIME — LOCATION UNAVAILABLE&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;ALPINE
+        ASCENTS&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;CONQUER NEW HEIGHTS&nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;DATE —
+        TIME — LOCATION UNAVAILABLE</div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content custom-modal">
+        <div class="modal-header">
+          <h2 class="modal-title" id="infoModalLabel">Information</h2><button type="button"
+            class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="infoModalBody"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-black border-0"><button type="button" class="gallery-close" data-bs-dismiss="modal"
+          aria-label="Close">×</button><img id="galleryModalImage" src="" alt="" class="gallery-modal-image"></div>
+    </div>
+  </div>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-4">
+    <div id="successToast" class="toast custom-toast" role="status">
+      <div class="toast-body"><i class="bi bi-check-circle-fill"></i><span>Message submitted successfully — frontend
+          demo only.</span></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

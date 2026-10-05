@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Across the Karakoram",
+    "location": "Gilgit-Baltistan, Pakistan",
+    "date": "2026",
+    "image": "images/gallery/high-mountain-camp.png",
+    "summary": "A fictional educational expedition story following a small team as they prepare, acclimatize and move through a demanding high-altitude environment.",
+    "body": "This fictional case study demonstrates expedition planning: weather checks, equipment preparation, acclimatization, team communication and conservative turnaround decisions."
+  },
+  {
+    "title": "First Light on the Ridge",
+    "location": "Alpine Valley",
+    "date": "2026",
+    "image": "images/gallery/sunrise-expedition.png",
+    "summary": "A fictional story about a dawn alpine start and the importance of route planning, pacing and changing conditions.",
+    "body": "The team starts before sunrise, maintains a steady pace and continuously reassesses the route. The story emphasizes preparation and risk awareness rather than speed alone."
+  },
+  {
+    "title": "Lake Above the Valley",
+    "location": "High Mountain Region",
+    "date": "2026",
+    "image": "images/gallery/alpine-lake.png",
+    "summary": "A fictional camp narrative focused on shelter, water planning and environmental responsibility.",
+    "body": "The group selects a durable campsite, minimizes impact and plans its next movement around weather and daylight. The story illustrates responsible mountain travel."
+  }
+]

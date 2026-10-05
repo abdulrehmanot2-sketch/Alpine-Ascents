@@ -1,0 +1,42 @@
+[
+  {
+    "rank": 1,
+    "record": "Highest mountain above sea level",
+    "value": "8,848.86 m",
+    "subject": "Mount Everest",
+    "location": "Nepal / China",
+    "note": "Official elevation commonly cited by Nepal and China."
+  },
+  {
+    "rank": 2,
+    "record": "Second-highest mountain",
+    "value": "8,611 m",
+    "subject": "K2",
+    "location": "Pakistan / China",
+    "note": "K2 is part of the Karakoram range."
+  },
+  {
+    "rank": 3,
+    "record": "Highest peak in Pakistan",
+    "value": "8,611 m",
+    "subject": "K2",
+    "location": "Gilgit-Baltistan",
+    "note": "A major high-altitude mountaineering objective."
+  },
+  {
+    "rank": 4,
+    "record": "Prominent 8,000 m peak in Pakistan",
+    "value": "8,126 m",
+    "subject": "Nanga Parbat",
+    "location": "Gilgit-Baltistan",
+    "note": "Known for its dramatic relief and challenging conditions."
+  },
+  {
+    "rank": 5,
+    "record": "Major alpine climbing milestone",
+    "value": "First ascent era",
+    "subject": "Matterhorn",
+    "location": "Swiss Alps / Italy",
+    "note": "A landmark in the history of European alpinism."
+  }
+]

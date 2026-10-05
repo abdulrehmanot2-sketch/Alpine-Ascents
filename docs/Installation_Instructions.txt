@@ -1,0 +1,7 @@
+ALPINE ASCENTS — INSTALLATION
+1. Extract the ZIP.
+2. Open index.html in a modern browser.
+3. Recommended: use VS Code Live Server so local JSON files can be fetched normally.
+4. Internet is required for Bootstrap, Google Fonts, Bootstrap Icons, Leaflet and OpenStreetMap tiles.
+5. To test geolocation, run from localhost/HTTPS and allow browser location permission.
+6. Replace sample organization links/content with verified official sources before public deployment.
